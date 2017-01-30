@@ -3,13 +3,16 @@
 	padding: 0;
 }
 
+#realtime {
+	color: white;
+}
+
 #leftHome {
 	width: 50%;
 	height:100vh;
 	float: left;
 	background-color: #2088E5;
 	text-align: center;
-	line-height: 100vh;
 	text-decoration: none;
 }
 
@@ -19,55 +22,61 @@
 }
 
 #rightHome {
+	position: relative;
 	width: 50%;
 	height:100vh;
 	float: right;
 	background-color: #FFFFFF;
 	text-align: center;
-	line-height: 100vh;
 	text-decoration: none;
 }
 
-#rightHome a {
-	color: white;
-	text-decoration: none;
-}
-header {
+.logo-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: transparent;
 	width: 100%;
-	height: 80px;
+	height: 100vh;
+	text-align: center;
+	z-index: 999;
 }
 
-
-nav {
-	width: 80%;
-	height: 80px;
-	float: right;
-	text-align: right;
-
-}
-nav ul {
-	width: 70%;
-	height: 100px;
-	float: right;
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
-nav ul li {
-	width: 100px;
-	height: 50px;
-	line-height: 40px;
+.central-logo {
+	vertical-align: middle;
+    max-height: 100vh;
+    max-width: 100%;
+    width: 400px;
+}
+
+.right-nav {
+	position: absolute;
+	z-index: 999;
+	right: 0;
+	top: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.right-nav li {
 	display: inline-block;
-  margin: 10px;
+	margin-right: 25px;
 }
 
-nav ul li a {
+.right-nav li a {
 	color: #333366;
 	transition: all 0.5s;
 	text-decoration: none;
 	font-size: 15px;
 }
 
-nav ul li a:hover {
+.right-nav li a:hover {
 	color: #2088E5;
-/* 	font-size: 18px; */
 
 }

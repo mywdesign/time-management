@@ -4,39 +4,42 @@
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" href="css/indexStyles.css">
 	<title>Index page</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
 </head>
 <body>
-	<header>
-		<div id="time">
-			<!-- <a href="index.html"> -->
-			<!-- 	<img src="images/logo1.png" alt=" ">
-			</a> -->
-		</div>
-		<nav>
-			<ul>
-				<li>
-					<a href="#toDoList" >To-do List</a>
-				</li>
-				<li>
-					<a href="#tomatoTimer" >Tomato Timer</a>
-				</li>
-				<li>
-					<a href="#getUpRecord" >Getup Record</a>
-				</li>
-				<li>
-					<a href="#myHours" >My Hours</a>
-				</li>
-				<li>
-					<a href="#more" >More Tools</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
+	<div class="logo-wrapper">
+		<span class="helper"></span>
+		<img src="images/fish.svg" class="central-logo">
+	</div>
 	<div id="leftHome">
-    <h1>124</h1>
+		<p id="realtime"></p>
 	</div>
 	<div id="rightHome">
-    <h1>356</h1>
+		<ul class="right-nav">
+			<li>
+				<a href="todo/toDoList.html" >To-do List</a>
+			</li>
+			<li>
+				<a href="tomato/tomatoTimer.html" >Tomato Timer</a>
+			</li>
+			<li>
+				<a href="getup/getUp.html" >Getup Record</a>
+			</li>
+			<li>
+				<a href="hours/myHours.html" >My Hours</a>
+			</li>
+			<li>
+				<a href="#more" >More Tools</a>
+			</li>
+		</ul>
 	</div>
+	<script>
+
+		function timer() {
+			var timeString = moment().format('MMMM Do YYYY, h:mm:ss a');
+			document.getElementById('realtime').innerHTML = timeString;
+		}
+		setInterval(timer, 1*1000);
+	</script>
 </body>
 </html>
