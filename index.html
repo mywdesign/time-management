@@ -11,9 +11,13 @@
 		<span class="helper"></span>
 		<img src="images/fish.svg" class="central-logo">
 	</div>
+
 	<div id="leftHome">
+		<p id="realdate"></p>
 		<p id="realtime"></p>
+	
 	</div>
+
 	<div id="rightHome">
 		<ul class="right-nav">
 			<li>
@@ -35,11 +39,17 @@
 	</div>
 	<script>
 
-		function timer() {
-			var timeString = moment().format('MMMM Do YYYY, h:mm:ss a');
+		function date() {
+			var dateString = moment().format('MMMM Do YYYY');
+			document.getElementById('realdate').innerHTML = dateString;
+		}
+		setInterval(date, 1*1000);
+
+		function time() {
+			var timeString = moment().format('h:mm:ss a');
 			document.getElementById('realtime').innerHTML = timeString;
 		}
-		setInterval(timer, 1*1000);
+		setInterval(time, 1*1000);
 	</script>
 </body>
 </html>

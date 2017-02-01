@@ -3,23 +3,34 @@
 	padding: 0;
 }
 
-#realtime {
+#realdate {
+	padding-top: 20px;
+	padding-left: 40px;
 	color: white;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 20px;
+}
+
+#realtime {
+	padding-left: 40px;
+	color: white;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 40px;
 }
 
 #leftHome {
 	width: 50%;
 	height:100vh;
 	float: left;
-	background-color: #2088E5;
-	text-align: center;
+	background-color: #33BBFF;
+/*	text-align: center;*/
 	text-decoration: none;
 }
 
-#leftHome a {
+/*#leftHome a {
 	color: #333366;
 	text-decoration: none;
-}
+}*/
 
 #rightHome {
 	position: relative;
@@ -74,9 +85,18 @@
 	transition: all 0.5s;
 	text-decoration: none;
 	font-size: 15px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 }
+
 
 .right-nav li a:hover {
 	color: #2088E5;
 
+}
+.right-nav li a:active {
+	color: #003366;
+}
+
+.right-nav li a:focus {
+	color: #99CCFF;
 }
